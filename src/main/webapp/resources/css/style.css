@@ -1,0 +1,226 @@
+:root {
+	--header-height: 60px;
+	--app-root-height: calc(100vh - var(--header-height));
+	--header-bg-color: #fff;
+	--menu-bg-color: #fff;
+	--border-color: #dee2e6;
+	--content-bg-color: #f8f9fa;
+	--footer-bg-color: #fff;
+	--text-color: #495057;
+	--hover-color: #f3f3f3;
+	--tr-bg-color: #fff;
+	--filtros-bg-color: #ededed;
+	--border-color: #ced4da;
+	--input-bg-color: #fff;
+	--button-color: #3f71ff;
+}
+
+.dark-theme {
+	--header-bg-color: #1e1e1e;
+	--menu-bg-color: rgb(33, 33, 33);
+	--border-color: #383838;
+	--content-bg-color: #121212;
+	--footer-bg-color: #1e1e1e;
+	--text-color: rgba(255, 255, 255, 0.87);
+	--hover-color: #252525;
+	--tr-bg-color: #2d2d2d;
+	--filtros-bg-color: #333333;
+	--border-color: #4f4e4e;
+	--input-bg-color: #292828;
+	--button-color: #3c6fff;
+}
+
+body,
+html {
+	margin: 0;
+	min-height: 100vh;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+header {
+	z-index: 100;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+	height: var(--header-height);
+	background-color: var(--header-bg-color);
+}
+
+#navbar {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	height: 60px;
+	color: var(--text-color)
+}
+
+#botao-menu {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 60px;
+	width: 60px;
+	cursor: pointer;
+	transition: background .4s;
+}
+
+
+#logo {
+	padding: 15px;
+}
+
+#funcoes {
+	height: 60px;
+}
+
+#botao-selecionar-tema {
+	height: 60px;
+	width: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: background .4s;
+}
+
+#botao-selecionar-tema a{
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+#botao-menu:hover,
+#botao-selecionar-tema:hover {
+	background-color: var(--hover-color);
+}
+
+#app-root {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	transition: background 0.5s;
+}
+
+#container {
+	flex: 1;
+	left: 0;
+}
+
+#container main {
+	min-height: calc(100% - 80px);
+	overflow-y: auto;
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 270px;
+	transition: padding 0.7s ease;
+	background-color: var(--content-bg-color);
+	color: var(--text-color);
+}
+
+#main-content div#controller-navigate {
+	transition: opacity 5s;
+}
+
+#container aside {
+	background-color: var(--menu-bg-color);
+	position: fixed;
+	border-right: 1px solid var(--border-color);
+	width: 250px;
+	min-height: 100%;
+	transition: transform 0.7s ease;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+footer {
+	height: 100px;
+	background-color: var(--footer-bg-color);
+	color: var(--text-color);
+}
+
+
+.tipo-menu {
+	display: block;
+	color: var(--text-color);
+	font-weight: 700;
+	user-select: none;
+	padding-left: 0.2rem;
+	padding-right: 0.2rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	font-size: .857rem;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+#opcoes-sidebar {
+	margin: 0;
+	padding: 0 0 1rem 0;
+	display: flex;
+	flex-direction: column;
+}
+
+#opcoes-sidebar li {
+	color: var(--text-color);
+	display: flex;
+	align-items: center;
+	border-radius: 3px;
+	font-size: 14px;
+}
+
+#opcoes-sidebar li a {
+	width: 100%;
+	height: 100%;
+	padding-left: 1.0rem;
+	padding-right: 1.0rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	color: var(--text-color);
+	text-decoration: none;
+}
+
+#opcoes-sidebar li a:hover {
+	background-color: var(--hover-color);
+}
+
+.menu {
+	width: 95%;
+	border-bottom: 1px solid var(--border-color);
+}
+
+#search-menu {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 5px;
+	height: 68px;
+	width: 250px;
+	border-bottom: 1px solid var(--border-color);
+	margin: 0;
+	color: var(--text-color);
+}
+
+#search-menu input {
+	height: 29px;
+	width: 201px;
+	font-size: 14px;
+}
+
+
+@media (max-width: 768px) {
+
+	#container aside {
+		top: 0;
+		z-index: 999;
+		transform: translateX(-100%);
+	}
+
+	#container main {
+		overflow-y: auto;
+		padding: 20px;
+	}
+
+
+}
