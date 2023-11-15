@@ -68,7 +68,7 @@ Nesse projeto estou estudando JavaServer Pages de modo que eu possa me aprofunda
 
 ## <span id="comeco">Começando</span>
 
-Para o layout front-end utilizei o front-end (HTML, CSS e JavaScript) de um outro projeto meu utilizando JSF. <a href="https://github.com/ldnovaes/gerenciamento-loja-jsf">Confira aqui</a>. A escolha na reutilização desse template vem como um ganho de produtividade me auxiliando muito a me preocupar e focar no que é meu objetivo primordial: conhecimento com JavaServer Pages. Com este objetivo em mente, eu queria gastar o mínimo de tempo possível com as edições em front-end enquanto que eu me focasse em totalidade para a construção e entendimento da aplicação no lado do servidor. A escolha de persistência no banco de dados não foi utilizando Hibernate, mas sim JDBC
+Para o layout front-end utilizei o front-end (HTML, CSS e JavaScript) de um outro projeto meu utilizando JSF. <a href="https://github.com/ldnovaes/gerenciamento-loja-jsf">Confira aqui</a>. A escolha na reutilização desse template vem como um ganho de produtividade me auxiliando muito a me preocupar e focar no que é meu objetivo primordial: conhecimento com JavaServer Pages. Com este objetivo em mente, eu queria gastar o mínimo de tempo possível com as edições em front-end enquanto que eu me focasse em totalidade para a construção e entendimento da aplicação no lado do servidor. A escolha de persistência no banco de dados não foi utilizando Hibernate, mas sim JDBC.
 
 #### <span id="requisitos">Requisitos</span>
 

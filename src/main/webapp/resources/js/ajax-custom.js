@@ -1,19 +1,50 @@
-function editar(id) {
+function editarCliente(id) {
 	$.post('cliente', { acao: 'editar', id: id }, function(response) {
 		var mainContentResponse = $(response).find('#main-content').html();
+
+		$("#main-content").html(mainContentResponse);
 		
-		// preencher dados
+	});
+}
+
+function deletarCliente(id) {
+	$.post('cliente', { acao: 'deletar', id: id }, function(response) {
+		recarregarDelete();
+	});
+}
+
+function editarProduto(id) {
+	$.post('produto', { acao: 'editar', id: id }, function(response) {
+		var mainContentResponse = $(response).find('#main-content').html();
 		
 		$("#main-content").html(mainContentResponse);
 		
 	});
 }
 
-function deletar(id) {
-	$.post('cliente', { acao: 'deletar', id: id }, function(response) {
+
+function deletarProduto(id) {
+	$.post('produto', { acao: 'deletar', id: id }, function(response) {
 		recarregarDelete();
 	});
 }
+
+
+function editarVenda(id) {
+	$.post('venda', { acao: 'editar', id: id }, function(response) {
+		var mainContentResponse = $(response).find('#main-content').html();
+
+		$("#main-content").html(mainContentResponse);
+		
+	});
+}
+
+function deletarVenda(id) {
+	$.post('venda', { acao: 'deletar', id: id }, function(response) {
+		recarregarDelete();
+	});
+}
+
 
 function recarregarDelete() {
 	$.get("cliente", function(response) {
@@ -27,10 +58,3 @@ function recarregarDelete() {
 function carregarPagina(pagina) {
 	$('#main-content').load(pagina);
 }
-
-function preencherCampos(cliente) {
-        document.getElementById('nome').value = cliente.nome;
-        document.getElementById('cpf').value = cliente.cpf;
-        document.getElementById('email').value = cliente.email;
-        document.getElementById('telefone').value = cliente.telefone;
-    }

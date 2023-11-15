@@ -22,6 +22,7 @@ public class ClienteService extends GenericService<Cliente> implements IClienteS
 
 		try {
 			while (resultSet.next()) {
+				System.out.println(resultSet.getMetaData().getColumnName(1));
 				Long id = resultSet.getLong("id");
 				String nome = resultSet.getString("nome");
 				String cpf = resultSet.getString("cpf");

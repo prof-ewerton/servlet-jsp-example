@@ -39,7 +39,8 @@
 					<ul id="opcoes-sidebar">
 						<li><a href="home">Home</a></li>
 						<li><a id="cliente" href="cliente">Clientes</a></li>
-						<li><a href="#">Produtos</a></li>
+						<li><a id="produto" href="produto">Produtos</a></li>
+						<li><a id="venda" href="venda">Venda</a></li>
 					</ul>
 					<div
 						style="width: 100%; display: flex; align-items: center; justify-content: center;">
