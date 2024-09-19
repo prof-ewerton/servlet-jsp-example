@@ -20,12 +20,12 @@ public class ConnectionFactory {
 	
 	private static Connection iniciarConexao() {
 		Map<String, String> env = System.getenv();
-		
+		/*/
 		for (Map.Entry<String,String> pair : env.entrySet()) {
 		    System.out.println(pair.getKey());
 		    System.out.println(pair.getValue());
 		}
-		
+		//*/
 		String DB_USER = env.get("DB_USER");
 		String DB_PASS = env.get("DB_PASS");
 		String DB_HOST = env.get("DB_HOST");
